@@ -33,11 +33,16 @@ let selectedPicturesArray = this.state.selectedPicturesArray;
   }
     else {
       selectedPicturesArray.push(id);
+      if (selectedPicturesArray.length === 12) {
+        alert("Nice job!  You win!");
+        this.setState({pictures, selectedPicturesArray: [], currentScore: 0});
+      } else {
       this.setState({currentScore: selectedPicturesArray.length});
       shuffleArray(this.state.pictures);
       this.setState({ pictures });
     }
   };
+};
  
 render() {
   const shuffledPictures = shuffleArray(this.state.pictures);

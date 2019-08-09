@@ -1,3 +1,13 @@
+#clicky-game
+Created by Bethany Grogg
+
+Try not to click the same image twice!
+
+Instructions:
+*   Click on an image.  Each time you click on a new image, your score increases by one.
+*   If you click on an image that has already been clicked, you lose the game.
+*   If you click all 12 images, you win!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

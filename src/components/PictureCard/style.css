@@ -10,13 +10,15 @@
 }
 
 .card > .img-container {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  text-align: center;
-  background:#6CADDC;
-}
+  }
 .card > .img-container > img {
-  width: 100%
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .card > .content {
@@ -33,15 +35,3 @@
   margin-top: 18px;
 }
 
-.card > .remove {
-  color: #ff1744;
-  font-size: 48px;
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  cursor: pointer;
-}
-
-.card > .remove:hover {
-  color: #d50000;
-}
