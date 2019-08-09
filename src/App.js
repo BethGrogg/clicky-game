@@ -23,17 +23,29 @@ state = {
 
 
 selectPicture = id => {
-  const shuffledPictures = shuffleArray(this.state.pictures);
-}
+console.log("in here");
+  if (this.state.clicked === true) {
+    alert("Sorry, you lose!");
+  }
+    else {
+      this.clicked = true;
+      shuffleArray(this.state.pictures);
+      this.setState({ pictures });
+    }
+  };
+ 
 render() {
+  const shuffledPictures = shuffleArray(this.state.pictures);
   return (
     <Wrapper>
       <Title>Clicky Game</Title>
-      {shuffledPictures.map((pictures, id) => (
+      {shuffledPictures.map(picture => (
         <PictureCard
-          id={pictures.id}
-          key={pictures.id}
-          image={pictures.image}
+        selectPicture = {this.selectPicture}
+          id={picture.id}
+          key={picture.id}
+          image={picture.image}
+          clicked={this.clicked}
         />
         ))};
     </Wrapper>
