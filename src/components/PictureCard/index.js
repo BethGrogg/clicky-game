@@ -6,7 +6,7 @@ function PictureCard(props) {
     <div className="card">
       <span onClick={() => props.selectPicture(props.id)} className="select">
       <div className="img-container">
-        <img alt={props.id} src={props.image} />
+        <img alt={props.id} src={props.image} style= {{flex:1 , width: undefined, height: undefined}}  />
       </div>
       
        

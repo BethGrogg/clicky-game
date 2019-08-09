@@ -29,6 +29,7 @@ selectPicture = id => {
 let selectedPicturesArray = this.state.selectedPicturesArray;
   if(selectedPicturesArray.includes(id)) {
     alert("Sorry, you lose!");
+    this.setState({pictures, selectedPicturesArray: [], currentScore: 0});
   }
     else {
       selectedPicturesArray.push(id);
@@ -46,7 +47,7 @@ render() {
       <Score>Your Score: {this.state.currentScore}
       </Score>
       {shuffledPictures.map(picture => (
-        <PictureCard
+      <PictureCard
         selectPicture = {this.selectPicture}
           id={picture.id}
           key={picture.id}
