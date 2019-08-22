@@ -8,6 +8,9 @@ Instructions:
 *   If you click on an image that has already been clicked, you lose the game.
 *   If you click all 12 images, you win!
 
+
+![Clicky Game](/clicky-game.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
